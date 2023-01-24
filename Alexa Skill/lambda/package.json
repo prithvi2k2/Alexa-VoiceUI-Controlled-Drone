@@ -1,0 +1,15 @@
+{
+  "name": "voice-controlled-drone",
+  "version": "1.0.0",
+  "description": "Command and Control Drone using Alexas' ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ask-sdk-core": "^2.12.1",
+    "ws": "^8.11.0"
+  }
+}

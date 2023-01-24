@@ -1,0 +1,21 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: An AWS Serverless Specification template describing your function.
+Resources:
+  PrithvisDroneVoicePilot:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Handler: index.handler
+      Runtime: nodejs16.x
+      CodeUri: .
+      Description: ''
+      MemorySize: 128
+      Timeout: 15
+      Role: >-
+        arn:aws:iam::532142924069:role/serverlessrepo-drone-comm-alexaskillskitnodejsfact-1DZNEFSMW3INE
+      Environment:
+        Variables:
+          REGION: eu-west-1
+          TABLE: prithvis-drone-comm-logger
+      RuntimePolicy:
+        UpdateRuntimeOn: Auto

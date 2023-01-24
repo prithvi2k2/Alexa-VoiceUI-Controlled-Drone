@@ -1,0 +1,844 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "drone pilot",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.YesIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NoIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "fly",
+                    "slots": [
+                        {
+                            "name": "action",
+                            "type": "action"
+                        },
+                        {
+                            "name": "dir",
+                            "type": "direction"
+                        },
+                        {
+                            "name": "dist",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "ask drone pilot {action} {dir} {dist}",
+                        "ask drone pilot {dir}",
+                        "ask drone pilot {dir} {dist}",
+                        "ask drone pilot {action} {dir}",
+                        "ask drone pilot {action} {dir} by {dist}",
+                        "ask drone pilot move the drone {dir} by {dist}",
+                        "ask drone pilot move the drone {dir} by {dist} meters",
+                        "ask drone pilot move the drone {dir} by {dist} metres",
+                        "ask drone pilot move the drone {dir} {dist}",
+                        "ask drone pilot move the drone {dir} {dist} meters",
+                        "ask drone pilot move the drone {dir} {dist} metres",
+                        "ask drone pilot move drone {dir} by {dist}",
+                        "ask drone pilot move drone {dir} by {dist} meters",
+                        "ask drone pilot move drone {dir} by {dist} metres",
+                        "ask drone pilot move drone {dir} {dist}",
+                        "ask drone pilot move drone {dir} {dist} meters",
+                        "ask drone pilot move drone {dir} {dist} metres",
+                        "ask drone pilot fly the drone {dir} by {dist}",
+                        "ask drone pilot fly the drone {dir} by {dist} meters",
+                        "ask drone pilot fly the drone {dir} by {dist} metres",
+                        "ask drone pilot fly the drone {dir} {dist}",
+                        "ask drone pilot fly the drone {dir} {dist} meters",
+                        "ask drone pilot fly the drone {dir} {dist} metres",
+                        "ask drone pilot fly drone {dir} by {dist}",
+                        "ask drone pilot fly drone {dir} by {dist} meters",
+                        "ask drone pilot fly drone {dir} by {dist} metres",
+                        "ask drone pilot fly drone {dir} {dist}",
+                        "ask drone pilot fly drone {dir} {dist} meters",
+                        "ask drone pilot fly drone {dir} {dist} metres",
+                        "ask drone pilot turn the drone {dir} by {dist}",
+                        "ask drone pilot turn the drone {dir} by {dist} meters",
+                        "ask drone pilot turn the drone {dir} by {dist} metres",
+                        "ask drone pilot turn the drone {dir} {dist}",
+                        "ask drone pilot turn the drone {dir} {dist} meters",
+                        "ask drone pilot turn the drone {dir} {dist} metres",
+                        "ask drone pilot turn drone {dir} by {dist}",
+                        "ask drone pilot turn drone {dir} by {dist} meters",
+                        "ask drone pilot turn drone {dir} by {dist} metres",
+                        "ask drone pilot turn drone {dir} {dist}",
+                        "ask drone pilot turn drone {dir} {dist} meters",
+                        "ask drone pilot turn drone {dir} {dist} metres",
+                        "ask drone pilot go the drone {dir} by {dist}",
+                        "ask drone pilot go the drone {dir} by {dist} meters",
+                        "ask drone pilot go the drone {dir} by {dist} metres",
+                        "ask drone pilot go the drone {dir} {dist}",
+                        "ask drone pilot go the drone {dir} {dist} meters",
+                        "ask drone pilot go the drone {dir} {dist} metres",
+                        "ask drone pilot go drone {dir} by {dist}",
+                        "ask drone pilot go drone {dir} by {dist} meters",
+                        "ask drone pilot go drone {dir} by {dist} metres",
+                        "ask drone pilot go drone {dir} {dist}",
+                        "ask drone pilot go drone {dir} {dist} meters",
+                        "ask drone pilot go drone {dir} {dist} metres",
+                        "ask drone pilot move the drone to {dir}",
+                        "ask drone pilot move the drone {dir}",
+                        "ask drone pilot move drone to {dir}",
+                        "ask drone pilot move drone {dir}",
+                        "ask drone pilot fly the drone to {dir}",
+                        "ask drone pilot fly the drone {dir}",
+                        "ask drone pilot fly drone to {dir}",
+                        "ask drone pilot fly drone {dir}",
+                        "ask drone pilot turn the drone to {dir}",
+                        "ask drone pilot turn the drone {dir}",
+                        "ask drone pilot turn drone to {dir}",
+                        "ask drone pilot turn drone {dir}",
+                        "ask drone pilot go the drone to {dir}",
+                        "ask drone pilot go the drone {dir}",
+                        "ask drone pilot go drone to {dir}",
+                        "ask drone pilot go drone {dir}",
+                        "ask drone pilot move {dir}",
+                        "ask drone pilot fly {dir}",
+                        "ask drone pilot turn {dir}",
+                        "ask drone pilot go {dir}",
+                        "ask drone pilot move {dir} by {dist}",
+                        "ask drone pilot move {dir} by {dist} meters",
+                        "ask drone pilot move {dir} by {dist} metres",
+                        "ask drone pilot move {dir} {dist}",
+                        "ask drone pilot move {dir} {dist} meters",
+                        "ask drone pilot move {dir} {dist} metres",
+                        "ask drone pilot fly {dir} by {dist}",
+                        "ask drone pilot fly {dir} by {dist} meters",
+                        "ask drone pilot fly {dir} by {dist} metres",
+                        "ask drone pilot fly {dir} {dist}",
+                        "ask drone pilot fly {dir} {dist} meters",
+                        "ask drone pilot fly {dir} {dist} metres",
+                        "ask drone pilot turn {dir} by {dist}",
+                        "ask drone pilot turn {dir} by {dist} meters",
+                        "ask drone pilot turn {dir} by {dist} metres",
+                        "ask drone pilot turn {dir} {dist}",
+                        "ask drone pilot turn {dir} {dist} meters",
+                        "ask drone pilot turn {dir} {dist} metres",
+                        "ask drone pilot go {dir} by {dist}",
+                        "ask drone pilot go {dir} by {dist} meters",
+                        "ask drone pilot go {dir} by {dist} metres",
+                        "ask drone pilot go {dir} {dist}",
+                        "ask drone pilot go {dir} {dist} meters",
+                        "ask drone pilot go {dir} {dist} metres",
+                        "ask drone pilot to {action} {dir} {dist}",
+                        "ask drone pilot to {dir}",
+                        "ask drone pilot to {dir} {dist}",
+                        "ask drone pilot to {action} {dir}",
+                        "ask drone pilot to {action} {dir} by {dist}",
+                        "ask drone pilot to move the drone {dir} by {dist}",
+                        "ask drone pilot to move the drone {dir} by {dist} meters",
+                        "ask drone pilot to move the drone {dir} by {dist} metres",
+                        "ask drone pilot to move the drone {dir} {dist}",
+                        "ask drone pilot to move the drone {dir} {dist} meters",
+                        "ask drone pilot to move the drone {dir} {dist} metres",
+                        "ask drone pilot to move drone {dir} by {dist}",
+                        "ask drone pilot to move drone {dir} by {dist} meters",
+                        "ask drone pilot to move drone {dir} by {dist} metres",
+                        "ask drone pilot to move drone {dir} {dist}",
+                        "ask drone pilot to move drone {dir} {dist} meters",
+                        "ask drone pilot to move drone {dir} {dist} metres",
+                        "ask drone pilot to fly the drone {dir} by {dist}",
+                        "ask drone pilot to fly the drone {dir} by {dist} meters",
+                        "ask drone pilot to fly the drone {dir} by {dist} metres",
+                        "ask drone pilot to fly the drone {dir} {dist}",
+                        "ask drone pilot to fly the drone {dir} {dist} meters",
+                        "ask drone pilot to fly the drone {dir} {dist} metres",
+                        "ask drone pilot to fly drone {dir} by {dist}",
+                        "ask drone pilot to fly drone {dir} by {dist} meters",
+                        "ask drone pilot to fly drone {dir} by {dist} metres",
+                        "ask drone pilot to fly drone {dir} {dist}",
+                        "ask drone pilot to fly drone {dir} {dist} meters",
+                        "ask drone pilot to fly drone {dir} {dist} metres",
+                        "ask drone pilot to turn the drone {dir} by {dist}",
+                        "ask drone pilot to turn the drone {dir} by {dist} meters",
+                        "ask drone pilot to turn the drone {dir} by {dist} metres",
+                        "ask drone pilot to turn the drone {dir} {dist}",
+                        "ask drone pilot to turn the drone {dir} {dist} meters",
+                        "ask drone pilot to turn the drone {dir} {dist} metres",
+                        "ask drone pilot to turn drone {dir} by {dist}",
+                        "ask drone pilot to turn drone {dir} by {dist} meters",
+                        "ask drone pilot to turn drone {dir} by {dist} metres",
+                        "ask drone pilot to turn drone {dir} {dist}",
+                        "ask drone pilot to turn drone {dir} {dist} meters",
+                        "ask drone pilot to turn drone {dir} {dist} metres",
+                        "ask drone pilot to go the drone {dir} by {dist}",
+                        "ask drone pilot to go the drone {dir} by {dist} meters",
+                        "ask drone pilot to go the drone {dir} by {dist} metres",
+                        "ask drone pilot to go the drone {dir} {dist}",
+                        "ask drone pilot to go the drone {dir} {dist} meters",
+                        "ask drone pilot to go the drone {dir} {dist} metres",
+                        "ask drone pilot to go drone {dir} by {dist}",
+                        "ask drone pilot to go drone {dir} by {dist} meters",
+                        "ask drone pilot to go drone {dir} by {dist} metres",
+                        "ask drone pilot to go drone {dir} {dist}",
+                        "ask drone pilot to go drone {dir} {dist} meters",
+                        "ask drone pilot to go drone {dir} {dist} metres",
+                        "ask drone pilot to move the drone to {dir}",
+                        "ask drone pilot to move the drone {dir}",
+                        "ask drone pilot to move drone to {dir}",
+                        "ask drone pilot to move drone {dir}",
+                        "ask drone pilot to fly the drone to {dir}",
+                        "ask drone pilot to fly the drone {dir}",
+                        "ask drone pilot to fly drone to {dir}",
+                        "ask drone pilot to fly drone {dir}",
+                        "ask drone pilot to turn the drone to {dir}",
+                        "ask drone pilot to turn the drone {dir}",
+                        "ask drone pilot to turn drone to {dir}",
+                        "ask drone pilot to turn drone {dir}",
+                        "ask drone pilot to go the drone to {dir}",
+                        "ask drone pilot to go the drone {dir}",
+                        "ask drone pilot to go drone to {dir}",
+                        "ask drone pilot to go drone {dir}",
+                        "ask drone pilot to move {dir}",
+                        "ask drone pilot to fly {dir}",
+                        "ask drone pilot to turn {dir}",
+                        "ask drone pilot to go {dir}",
+                        "ask drone pilot to move {dir} by {dist}",
+                        "ask drone pilot to move {dir} by {dist} meters",
+                        "ask drone pilot to move {dir} by {dist} metres",
+                        "ask drone pilot to move {dir} {dist}",
+                        "ask drone pilot to move {dir} {dist} meters",
+                        "ask drone pilot to move {dir} {dist} metres",
+                        "ask drone pilot to fly {dir} by {dist}",
+                        "ask drone pilot to fly {dir} by {dist} meters",
+                        "ask drone pilot to fly {dir} by {dist} metres",
+                        "ask drone pilot to fly {dir} {dist}",
+                        "ask drone pilot to fly {dir} {dist} meters",
+                        "ask drone pilot to fly {dir} {dist} metres",
+                        "ask drone pilot to turn {dir} by {dist}",
+                        "ask drone pilot to turn {dir} by {dist} meters",
+                        "ask drone pilot to turn {dir} by {dist} metres",
+                        "ask drone pilot to turn {dir} {dist}",
+                        "ask drone pilot to turn {dir} {dist} meters",
+                        "ask drone pilot to turn {dir} {dist} metres",
+                        "ask drone pilot to go {dir} by {dist}",
+                        "ask drone pilot to go {dir} by {dist} meters",
+                        "ask drone pilot to go {dir} by {dist} metres",
+                        "ask drone pilot to go {dir} {dist}",
+                        "ask drone pilot to go {dir} {dist} meters",
+                        "ask drone pilot to go {dir} {dist} metres",
+                        "{action} {dir} {dist}",
+                        "{dir}",
+                        "{dir} {dist}",
+                        "{action} {dir}",
+                        "{action} {dir} by {dist}",
+                        "move the drone {dir} by {dist}",
+                        "move the drone {dir} by {dist} meters",
+                        "move the drone {dir} by {dist} metres",
+                        "move the drone {dir} {dist}",
+                        "move the drone {dir} {dist} meters",
+                        "move the drone {dir} {dist} metres",
+                        "move drone {dir} by {dist}",
+                        "move drone {dir} by {dist} meters",
+                        "move drone {dir} by {dist} metres",
+                        "move drone {dir} {dist}",
+                        "move drone {dir} {dist} meters",
+                        "move drone {dir} {dist} metres",
+                        "fly the drone {dir} by {dist}",
+                        "fly the drone {dir} by {dist} meters",
+                        "fly the drone {dir} by {dist} metres",
+                        "fly the drone {dir} {dist}",
+                        "fly the drone {dir} {dist} meters",
+                        "fly the drone {dir} {dist} metres",
+                        "fly drone {dir} by {dist}",
+                        "fly drone {dir} by {dist} meters",
+                        "fly drone {dir} by {dist} metres",
+                        "fly drone {dir} {dist}",
+                        "fly drone {dir} {dist} meters",
+                        "fly drone {dir} {dist} metres",
+                        "turn the drone {dir} by {dist}",
+                        "turn the drone {dir} by {dist} meters",
+                        "turn the drone {dir} by {dist} metres",
+                        "turn the drone {dir} {dist}",
+                        "turn the drone {dir} {dist} meters",
+                        "turn the drone {dir} {dist} metres",
+                        "turn drone {dir} by {dist}",
+                        "turn drone {dir} by {dist} meters",
+                        "turn drone {dir} by {dist} metres",
+                        "turn drone {dir} {dist}",
+                        "turn drone {dir} {dist} meters",
+                        "turn drone {dir} {dist} metres",
+                        "go the drone {dir} by {dist}",
+                        "go the drone {dir} by {dist} meters",
+                        "go the drone {dir} by {dist} metres",
+                        "go the drone {dir} {dist}",
+                        "go the drone {dir} {dist} meters",
+                        "go the drone {dir} {dist} metres",
+                        "go drone {dir} by {dist}",
+                        "go drone {dir} by {dist} meters",
+                        "go drone {dir} by {dist} metres",
+                        "go drone {dir} {dist}",
+                        "go drone {dir} {dist} meters",
+                        "go drone {dir} {dist} metres",
+                        "move the drone to {dir}",
+                        "move the drone {dir}",
+                        "move drone to {dir}",
+                        "move drone {dir}",
+                        "fly the drone to {dir}",
+                        "fly the drone {dir}",
+                        "fly drone to {dir}",
+                        "fly drone {dir}",
+                        "turn the drone to {dir}",
+                        "turn the drone {dir}",
+                        "turn drone to {dir}",
+                        "turn drone {dir}",
+                        "go the drone to {dir}",
+                        "go the drone {dir}",
+                        "go drone to {dir}",
+                        "go drone {dir}",
+                        "move {dir}",
+                        "fly {dir}",
+                        "turn {dir}",
+                        "go {dir}",
+                        "move {dir} by {dist}",
+                        "move {dir} by {dist} meters",
+                        "move {dir} by {dist} metres",
+                        "move {dir} {dist}",
+                        "move {dir} {dist} meters",
+                        "move {dir} {dist} metres",
+                        "fly {dir} by {dist}",
+                        "fly {dir} by {dist} meters",
+                        "fly {dir} by {dist} metres",
+                        "fly {dir} {dist}",
+                        "fly {dir} {dist} meters",
+                        "fly {dir} {dist} metres",
+                        "turn {dir} by {dist}",
+                        "turn {dir} by {dist} meters",
+                        "turn {dir} by {dist} metres",
+                        "turn {dir} {dist}",
+                        "turn {dir} {dist} meters",
+                        "turn {dir} {dist} metres",
+                        "go {dir} by {dist}",
+                        "go {dir} by {dist} meters",
+                        "go {dir} by {dist} metres",
+                        "go {dir} {dist}",
+                        "go {dir} {dist} meters",
+                        "go {dir} {dist} metres"
+                    ]
+                },
+                {
+                    "name": "status",
+                    "slots": [
+                        {
+                            "name": "askStatus",
+                            "type": "askStatus"
+                        }
+                    ],
+                    "samples": [
+                        "where is drone",
+                        "where is my drone",
+                        "where is the drone",
+                        "ask drone pilot where is drone",
+                        "ask drone pilot where is my drone",
+                        "ask drone pilot where is the drone",
+                        "ask drone pilot is the drone flying",
+                        "ask drone pilot {askStatus} status",
+                        "ask drone pilot status",
+                        "ask drone pilot ask the status of the drone",
+                        "ask drone pilot ask the status of the",
+                        "ask drone pilot ask the status of drone",
+                        "ask drone pilot ask the status of",
+                        "ask drone pilot ask the status the drone",
+                        "ask drone pilot ask the status the",
+                        "ask drone pilot ask the status drone",
+                        "ask drone pilot ask the status",
+                        "ask drone pilot ask status of the drone",
+                        "ask drone pilot ask status of the",
+                        "ask drone pilot ask status of drone",
+                        "ask drone pilot ask status of",
+                        "ask drone pilot ask status the drone",
+                        "ask drone pilot ask status the",
+                        "ask drone pilot ask status drone",
+                        "ask drone pilot ask status",
+                        "ask drone pilot show the status of the drone",
+                        "ask drone pilot show the status of the",
+                        "ask drone pilot show the status of drone",
+                        "ask drone pilot show the status of",
+                        "ask drone pilot show the status the drone",
+                        "ask drone pilot show the status the",
+                        "ask drone pilot show the status drone",
+                        "ask drone pilot show the status",
+                        "ask drone pilot show status of the drone",
+                        "ask drone pilot show status of the",
+                        "ask drone pilot show status of drone",
+                        "ask drone pilot show status of",
+                        "ask drone pilot show status the drone",
+                        "ask drone pilot show status the",
+                        "ask drone pilot show status drone",
+                        "ask drone pilot show status",
+                        "ask drone pilot get the status of the drone",
+                        "ask drone pilot get the status of the",
+                        "ask drone pilot get the status of drone",
+                        "ask drone pilot get the status of",
+                        "ask drone pilot get the status the drone",
+                        "ask drone pilot get the status the",
+                        "ask drone pilot get the status drone",
+                        "ask drone pilot get the status",
+                        "ask drone pilot get status of the drone",
+                        "ask drone pilot get status of the",
+                        "ask drone pilot get status of drone",
+                        "ask drone pilot get status of",
+                        "ask drone pilot get status the drone",
+                        "ask drone pilot get status the",
+                        "ask drone pilot get status drone",
+                        "ask drone pilot get status",
+                        "ask drone pilot tell the status of the drone",
+                        "ask drone pilot tell the status of the",
+                        "ask drone pilot tell the status of drone",
+                        "ask drone pilot tell the status of",
+                        "ask drone pilot tell the status the drone",
+                        "ask drone pilot tell the status the",
+                        "ask drone pilot tell the status drone",
+                        "ask drone pilot tell the status",
+                        "ask drone pilot tell status of the drone",
+                        "ask drone pilot tell status of the",
+                        "ask drone pilot tell status of drone",
+                        "ask drone pilot tell status of",
+                        "ask drone pilot tell status the drone",
+                        "ask drone pilot tell status the",
+                        "ask drone pilot tell status drone",
+                        "ask drone pilot tell status",
+                        "is the drone flying",
+                        "{askStatus} status",
+                        "status",
+                        "ask the status of the drone",
+                        "ask the status of the",
+                        "ask the status of drone",
+                        "ask the status of",
+                        "ask the status the drone",
+                        "ask the status the",
+                        "ask the status drone",
+                        "ask the status",
+                        "ask status of the drone",
+                        "ask status of the",
+                        "ask status of drone",
+                        "ask status of",
+                        "ask status the drone",
+                        "ask status the",
+                        "ask status drone",
+                        "ask status",
+                        "show the status of the drone",
+                        "show the status of the",
+                        "show the status of drone",
+                        "show the status of",
+                        "show the status the drone",
+                        "show the status the",
+                        "show the status drone",
+                        "show the status",
+                        "show status of the drone",
+                        "show status of the",
+                        "show status of drone",
+                        "show status of",
+                        "show status the drone",
+                        "show status the",
+                        "show status drone",
+                        "show status",
+                        "get the status of the drone",
+                        "get the status of the",
+                        "get the status of drone",
+                        "get the status of",
+                        "get the status the drone",
+                        "get the status the",
+                        "get the status drone",
+                        "get the status",
+                        "get status of the drone",
+                        "get status of the",
+                        "get status of drone",
+                        "get status of",
+                        "get status the drone",
+                        "get status the",
+                        "get status drone",
+                        "get status",
+                        "tell the status of the drone",
+                        "tell the status of the",
+                        "tell the status of drone",
+                        "tell the status of",
+                        "tell the status the drone",
+                        "tell the status the",
+                        "tell the status drone",
+                        "tell the status",
+                        "tell status of the drone",
+                        "tell status of the",
+                        "tell status of drone",
+                        "tell status of",
+                        "tell status the drone",
+                        "tell status the",
+                        "tell status drone",
+                        "tell status",
+                        "ask drone pilot to is the drone flying",
+                        "ask drone pilot to {askStatus} status",
+                        "ask drone pilot to status",
+                        "ask drone pilot to ask the status of the drone",
+                        "ask drone pilot to ask the status of the",
+                        "ask drone pilot to ask the status of drone",
+                        "ask drone pilot to ask the status of",
+                        "ask drone pilot to ask the status the drone",
+                        "ask drone pilot to ask the status the",
+                        "ask drone pilot to ask the status drone",
+                        "ask drone pilot to ask the status",
+                        "ask drone pilot to ask status of the drone",
+                        "ask drone pilot to ask status of the",
+                        "ask drone pilot to ask status of drone",
+                        "ask drone pilot to ask status of",
+                        "ask drone pilot to ask status the drone",
+                        "ask drone pilot to ask status the",
+                        "ask drone pilot to ask status drone",
+                        "ask drone pilot to ask status",
+                        "ask drone pilot to show the status of the drone",
+                        "ask drone pilot to show the status of the",
+                        "ask drone pilot to show the status of drone",
+                        "ask drone pilot to show the status of",
+                        "ask drone pilot to show the status the drone",
+                        "ask drone pilot to show the status the",
+                        "ask drone pilot to show the status drone",
+                        "ask drone pilot to show the status",
+                        "ask drone pilot to show status of the drone",
+                        "ask drone pilot to show status of the",
+                        "ask drone pilot to show status of drone",
+                        "ask drone pilot to show status of",
+                        "ask drone pilot to show status the drone",
+                        "ask drone pilot to show status the",
+                        "ask drone pilot to show status drone",
+                        "ask drone pilot to show status",
+                        "ask drone pilot to get the status of the drone",
+                        "ask drone pilot to get the status of the",
+                        "ask drone pilot to get the status of drone",
+                        "ask drone pilot to get the status of",
+                        "ask drone pilot to get the status the drone",
+                        "ask drone pilot to get the status the",
+                        "ask drone pilot to get the status drone",
+                        "ask drone pilot to get the status",
+                        "ask drone pilot to get status of the drone",
+                        "ask drone pilot to get status of the",
+                        "ask drone pilot to get status of drone",
+                        "ask drone pilot to get status of",
+                        "ask drone pilot to get status the drone",
+                        "ask drone pilot to get status the",
+                        "ask drone pilot to get status drone",
+                        "ask drone pilot to get status",
+                        "ask drone pilot to tell the status of the drone",
+                        "ask drone pilot to tell the status of the",
+                        "ask drone pilot to tell the status of drone",
+                        "ask drone pilot to tell the status of",
+                        "ask drone pilot to tell the status the drone",
+                        "ask drone pilot to tell the status the",
+                        "ask drone pilot to tell the status drone",
+                        "ask drone pilot to tell the status",
+                        "ask drone pilot to tell status of the drone",
+                        "ask drone pilot to tell status of the",
+                        "ask drone pilot to tell status of drone",
+                        "ask drone pilot to tell status of",
+                        "ask drone pilot to tell status the drone",
+                        "ask drone pilot to tell status the",
+                        "ask drone pilot to tell status drone",
+                        "ask drone pilot to tell status"
+                    ]
+                },
+                {
+                    "name": "rtl",
+                    "slots": [],
+                    "samples": [
+                        "ask drone pilot to come to home",
+                        "ask drone pilot to come to launch",
+                        "ask drone pilot to come to start",
+                        "ask drone pilot to go to home",
+                        "ask drone pilot to go to launch",
+                        "ask drone pilot to go to start",
+                        "ask drone pilot to return to home",
+                        "ask drone pilot to return to launch",
+                        "ask drone pilot to return to start",
+                        "ask drone pilot to rtl",
+                        "ask drone pilot come to home",
+                        "ask drone pilot come to launch",
+                        "ask drone pilot come to start",
+                        "ask drone pilot go to home",
+                        "ask drone pilot go to launch",
+                        "ask drone pilot go to start",
+                        "ask drone pilot return to home",
+                        "ask drone pilot return to launch",
+                        "ask drone pilot return to start",
+                        "ask drone pilot rtl",
+                        "come to home",
+                        "come to launch",
+                        "come to start",
+                        "go to home",
+                        "go to launch",
+                        "go to start",
+                        "return to home",
+                        "return to launch",
+                        "return to start",
+                        "rtl"
+                    ]
+                },
+                {
+                    "name": "takeoff",
+                    "slots": [],
+                    "samples": [
+                        "ask drone pilot start the takeoff",
+                        "ask drone pilot begin the takeoff",
+                        "ask drone pilot initiate the takeoff",
+                        "ask drone pilot start the drone",
+                        "ask drone pilot launch the drone",
+                        "ask drone pilot takeoff the drone",
+                        "ask drone pilot takeoff",
+                        "ask drone pilot start flying",
+                        "ask drone pilot take off",
+                        "ask drone pilot launch",
+                        "ask drone pilot initiate the drone",
+                        "ask drone pilot start takeoff",
+                        "ask drone pilot begin takeoff",
+                        "ask drone pilot initiate takeoff",
+                        "ask drone pilot to start the takeoff",
+                        "ask drone pilot to begin the takeoff",
+                        "ask drone pilot to initiate the takeoff",
+                        "ask drone pilot to start the drone",
+                        "ask drone pilot to launch the drone",
+                        "ask drone pilot to takeoff the drone",
+                        "ask drone pilot to takeoff",
+                        "ask drone pilot to start flying",
+                        "ask drone pilot to take off",
+                        "ask drone pilot to launch",
+                        "ask drone pilot to initiate the drone",
+                        "ask drone pilot to start takeoff",
+                        "ask drone pilot to begin takeoff",
+                        "ask drone pilot to initiate takeoff",
+                        "start the takeoff",
+                        "begin the takeoff",
+                        "initiate the takeoff",
+                        "start the drone",
+                        "launch the drone",
+                        "takeoff the drone",
+                        "takeoff",
+                        "start flying",
+                        "take off",
+                        "launch",
+                        "initiate the drone",
+                        "start takeoff",
+                        "begin takeoff",
+                        "initiate takeoff"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "direction",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "higher",
+                                "synonyms": [
+                                    "above",
+                                    "up",
+                                    "elevate",
+                                    "ascend"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "lower",
+                                "synonyms": [
+                                    "below",
+                                    "down",
+                                    "descend"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "east",
+                                "synonyms": [
+                                    "right"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "west",
+                                "synonyms": [
+                                    "left"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "south",
+                                "synonyms": [
+                                    "backward",
+                                    "backwards",
+                                    "back"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "north",
+                                "synonyms": [
+                                    "forward",
+                                    "forwards",
+                                    "front"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "action",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "fly",
+                                "synonyms": [
+                                    "turn",
+                                    "go",
+                                    "move"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "askStatus",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "ask"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "show"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "tell"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "get"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "fly",
+                    "delegationStrategy": "ALWAYS",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "action",
+                            "type": "action",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {},
+                            "validations": [
+                                {
+                                    "type": "hasEntityResolutionMatch",
+                                    "prompt": "Slot.Validation.458738252382.26399974486.788534187045"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "dir",
+                            "type": "direction",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {},
+                            "validations": [
+                                {
+                                    "type": "hasEntityResolutionMatch",
+                                    "prompt": "Slot.Validation.1410942804379.1445468791456.509252997353"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "dist",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {},
+                            "validations": [
+                                {
+                                    "type": "isGreaterThan",
+                                    "prompt": "Slot.Validation.1044590274849.758205907639.115773591592",
+                                    "value": "0"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "delegationStrategy": "ALWAYS"
+        },
+        "prompts": [
+            {
+                "id": "Slot.Validation.458738252382.1168316520456.1319257876571",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Provide a proper altitude like 'lower' and 'higher', 'elevate' and 'descend'."
+                    }
+                ]
+            },
+            {
+                "id": "Slot.Validation.458738252382.26399974486.788534187045",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Use verbs like 'fly', 'move', 'turn', 'go'"
+                    }
+                ]
+            },
+            {
+                "id": "Slot.Validation.1410942804379.1445468791456.509252997353",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "invalid direction, provide a valid direction"
+                    }
+                ]
+            },
+            {
+                "id": "Slot.Validation.1044590274849.758205907639.115773591592",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Please provide values higher than zero"
+                    }
+                ]
+            }
+        ]
+    }
+}

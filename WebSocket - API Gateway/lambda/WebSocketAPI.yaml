@@ -1,0 +1,20 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: An AWS Serverless Specification template describing your function.
+Resources:
+  PrithsWebSocketAPI:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Handler: index.handler
+      Runtime: nodejs16.x
+      CodeUri: .
+      Description: ''
+      MemorySize: 128
+      Timeout: 15
+      Role: >-
+        arn:aws:iam::532142924069:role/serverlessrepo-drone-comm-alexaskillskitnodejsfact-1DZNEFSMW3INE
+      Environment:
+        Variables:
+          TABLE: PrithsWSSAPI_connections
+      RuntimePolicy:
+        UpdateRuntimeOn: Auto
