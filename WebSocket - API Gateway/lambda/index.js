@@ -1,10 +1,11 @@
+// API GateWay WebSocket Server which connects GCS to which drone is connected with and User interacting with Alexa device/app
+
 const AWS = require('aws-sdk');
 
 const ENDPOINT = process.env.ApiEndpoint; // AWS ApiGateway endpoint
 const gatewayClient = new AWS.ApiGatewayManagementApi({endpoint: ENDPOINT});
 const dbClient = new AWS.DynamoDB.DocumentClient();
-
-const Table = process.env.TABLE;
+const Table = process.env.TABLE; // Database Table name
 
 // Add a new connection to DB
 const addToDb = async (cid)=>{
@@ -18,6 +19,7 @@ const addToDb = async (cid)=>{
         console.log(err);
     }
 };
+
 // Delete a connection from DB
 const delFromDb = async (cid)=>{
     try{
@@ -33,6 +35,7 @@ const delFromDb = async (cid)=>{
     }
 };
 
+// Retrieves all Connection IDs of currently connected clients from database
 const getAllCids = async ()=>{
     try{
         let res = await dbClient.scan({
@@ -47,6 +50,7 @@ const getAllCids = async ()=>{
     }
 };
 
+// Sends message to a specified client
 const respondOne = async (cid, body)=>{
     try{
         await gatewayClient.postToConnection({
@@ -59,6 +63,7 @@ const respondOne = async (cid, body)=>{
     }
 };
 
+// Sends messages to all the connected clients(except the one which triggered this function)
 const respondAll = async (reqCid, body)=>{
     let cids = await getAllCids();
     try{
@@ -85,15 +90,19 @@ exports.handler = async (event) => {
         // Handling requests based on routes
         switch(route){
             case '$connect':
+                // On connecting with a client, store it's connectionId in database
                 await addToDb(cid);
                 break;
             case '$disconnect':
+                // When a client disconnects, remove it's connectionId from database
                 await delFromDb(cid);
                 break;
             case 'echo':
+                // Echoing message using `respondOne` function to send message to itself
                 await respondOne(cid,event.body);
                 break;
             case 'broadcast':
+                // Passes message from one client to other connected client(s)
                 await respondAll(cid,event.body);
                 break;
             case '$default':
