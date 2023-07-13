@@ -1,6 +1,6 @@
 const AWS = require('aws-sdk');
 
-const ENDPOINT = '32226u87yi.execute-api.eu-west-1.amazonaws.com/test_experiment/';
+const ENDPOINT = process.env.ApiEndpoint; // AWS ApiGateway endpoint
 const gatewayClient = new AWS.ApiGatewayManagementApi({endpoint: ENDPOINT});
 const dbClient = new AWS.DynamoDB.DocumentClient();
 
