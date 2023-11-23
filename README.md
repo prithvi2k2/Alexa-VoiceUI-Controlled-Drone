@@ -11,6 +11,16 @@ In this project, where the drone's movement is guided using Alexa voice service,
   <img alt="Design overview" src="./misc/l.png">
 </picture>
 
+- An **IoT**-based project where Alexa is used as a **VUI**(Voice User Interface) to control the drone hands-free
+- Developed an **Alexa Skill** which interacts with end-users on Alexa-enabled devices or Alexa app
+- End-to-end communication was achieved via **WebSockets** and **Radio Telemetry**
+- WebSocket API is built on **AWS Lambda** and deployed on **AWS API Gateway**
+- Developed an application that runs on a Ground Control Station(**GCS**) device 
+- GCS app communicates between drone(using radio telemetry) and Alexa(using WebSockets)
+- Radio telemetry was made possible using open-source **dronekit-python** package built upon low-level **MAVLink** messaging protocol
+- Dronekit-python passes commands to the Drone’s onboard Flight Control Unit(**FCU**) with installed ArduPilot firmware
+- **AWS DynamoDB** logs input voice commands and stores active WebSocket connection-IDs
+
 ## __Requirements🔧__
 
 > ### _Hardware requirements_
