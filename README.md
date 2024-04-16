@@ -48,13 +48,13 @@ In this project, where the drone's movement is guided using Alexa voice service,
   - Geofence radius and altitude are customizable
   - Radius and altitude are both measured in meters
 
-<!-- <details>
+<details>
   <summary>Potential future additions</summary>
   -> Aerial photography using a camera on the drone</br>
-  -> Autonomous missions, surveys, circle and rectangle missions</br>
-  -> Live footage from the camera on drone</br>
-  -> LTE-powered drone to eliminate range and bandwidth issues
-</details> -->
+  -> Autonomous missions, surveys, circle and rectangle missions etc</br>
+  -> Live footage streaming using the camera on drone</br>
+  -> LTE-powered drone to eliminate limited-range issues
+</details>
 
 ## __Setup⚙__
 
