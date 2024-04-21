@@ -4,22 +4,22 @@ import asyncio
 import threading
 import websockets
 import json
-# All functions related to drone movement are in droneActions,
+# All functions related to drones' movement are written in droneActions.py,
 # including drone state as STATUS
 from droneActions import *
-# STATUS
+# STATUS / STATE OF DRONE PILOT
 # -2 -> RADIUS BREACH - Geofence radius breach
 # -1 -> ALTITUDE BREACH - Geofence altitude breach
 # 0  -> BUSY  - work-in-progress state : will reject all further commands when BUSY
-# 1  -> READY - initial state : will accept incoming commands, not armed/not tookoff
-# 2  -> DONE  - drone positioned : will accept incoming commands, tookoff
+# 1  -> READY - initial state : will accept incoming commands, not armed / not took off
+# 2  -> DONE  - drone positioned at target coords or and alt : will accept further incoming commands
 
 url = 'wss://32226u87yi.execute-api.eu-west-1.amazonaws.com/test_experiment'
 
 
 # Init and connect to a drone
-# either using options provided on cli
-# or default simulator if not provided
+# either using options provided in cli
+# or default to ardupilot-sitl simulator if not provided
 import argparse  
 parser = argparse.ArgumentParser(description='Demonstrates basic mission operations.')
 parser.add_argument('--connect', 

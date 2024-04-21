@@ -95,7 +95,7 @@ class FENCE:
     ON = True # Enabled by default
 
     # Draws a imaginary CYLINDRICAL fence
-    def __init__(self,rad=30,alt=15):
+    def __init__(self, rad=30, alt=15):
         self.RAD = rad # MAX FENCE RADIUS
         self.ALT = alt # MAX FENCE ALTITUDE
     

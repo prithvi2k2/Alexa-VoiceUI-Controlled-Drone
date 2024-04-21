@@ -1,21 +1,21 @@
 from dk import *
 # STATUS
 # 0 -> BUSY  - work-in-progress state : will reject all further commands when BUSY
-# 1 -> READY - initial state : will accept incoming commands
-# 2 -> DONE  - drone positioned : will accept incoming commands
-# Initial status be 1
+# 1 -> READY - initial state / Disarmed / Ready to Takeoff : will accept incoming commands
+# 2 -> DONE  - drone positioned at target coords or and alt : will accept incoming commands
+# Initial status set to 1
 STATUS = 1
 
 # Initialise and connect to drone
 def findAndConnect(cstring=None):
-    # If conn_str provided as cli argument...Maybe the real drone, Use it
     if cstring is not None : 
+        # If conn_str provided as cli argument... Maybe the real drone, Using it
         conn_str = cstring
     else:
-        ########### Starts dronekit-sitl sim 
+        ########### Starts dronekit-sitl sim
         # sitl = start_sim()
         # conn_str = sitl.connection_string() # sitl generated cstring
-        ############## else use a conn string of already running sim
+        ############## else use a conn string of already running sim/drone
         conn_str = "tcp:127.0.0.1:5763"
     connectToDrone(conn_str)
     from dk import vehicle
