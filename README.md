@@ -30,9 +30,9 @@ In this project, where the drone's movement is guided using Alexa voice service,
 - Amazon Echo device
 
 > ### _Software requirements_
-- Amazon Web Services [account](https://aws.amazon.com/) { Lambda, API Gateway, DynamoDB }
+- Amazon Web Services [AWS](https://aws.amazon.com/) { Lambda, API Gateway, DynamoDB }
 - DroneKit Python [API](https://dronekit.io/#air)
-- Amazon developer [account](https://developer.amazon.com/) for Alexa Skill programming
+- Alexa Skills Kit [SDK](https://developer.amazon.com/en-US/alexa/alexa-skills-kit) for Alexa Skill programming
 
 ## __Features✨__
 
